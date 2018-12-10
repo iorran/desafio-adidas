@@ -1,0 +1,23 @@
+server:
+  port: 8084
+
+spring: 
+  application: 
+    name: adidas-email
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    
+security:
+  basicAuth:  
+    username: spring
+    password: secret 
+
+eureka: 
+   client:
+     healthcheck:
+      enabled: true  
+     serviceUrl: 
+       defaultZone: http://@url.eureka@:8080/eureka/
+   instance:  
+    prefer-ip-address: true

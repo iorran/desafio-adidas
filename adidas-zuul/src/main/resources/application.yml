@@ -1,0 +1,35 @@
+server:
+  port: 2020
+
+spring: 
+  application: 
+    name: adidas-zuul
+    
+zuul:
+  ignored-services: '*'
+  routes:
+    adidas-sub:
+      path: /subscriptions/**
+      service-id: adidas-sub 
+      sensitive-headers: Cookie,Set-Cookie 
+      stripPrefix: false
+    adidas-evt:
+      path: /events/**
+      service-id: adidas-evt 
+      sensitive-headers: Cookie,Set-Cookie
+      stripPrefix: false
+    adidas-email:
+      path: /emails/**
+      service-id: adidas-email 
+      sensitive-headers: Cookie,Set-Cookie    
+      stripPrefix: false
+
+eureka: 
+   client:
+     healthcheck:
+      enabled: true  
+     serviceUrl: 
+       defaultZone: http://@url.eureka@:8080/eureka/
+   instance:  
+    prefer-ip-address: true
+    

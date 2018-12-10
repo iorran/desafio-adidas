@@ -1,0 +1,17 @@
+spring:
+  application:
+    name:   
+  thymeleaf:
+    enabled: false
+    
+server:
+  port: 8080
+  
+eureka:
+  server:
+    enable-self-preservation: true
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://@url.eureka@:8080/eureka/

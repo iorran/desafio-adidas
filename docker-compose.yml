@@ -1,0 +1,51 @@
+version: "3"
+services:
+  adidas-eureka:
+    build: adidas-eureka
+    ports:
+      - "8080:8080"
+
+  adidas-zuul:
+    build: adidas-zuul
+    ports:
+      - "2020:2020"
+    links:
+      - adidas-eureka:adidas-eureka
+    depends_on:
+     - adidas-eureka
+
+  adidas-evt:
+    build: adidas-evt
+    ports:
+      - "8083:8083"
+    links:
+      - adidas-eureka:adidas-eureka
+    depends_on:
+     - adidas-eureka
+
+  adidas-email:
+    build: adidas-email
+    ports:
+      - "8084:8084"
+    links:
+      - adidas-eureka:adidas-eureka
+    depends_on:
+     - adidas-eureka
+
+  adidas-sub:
+    build: adidas-sub
+    ports:
+      - "8082:8082"
+    links:
+      - adidas-eureka:adidas-eureka
+    depends_on:
+     - adidas-eureka
+
+  adidas-db:
+    build: adidas-db
+    ports:
+      - "8081:8081"
+    links:
+      - adidas-eureka:adidas-eureka
+    depends_on:
+     - adidas-eureka

@@ -1,0 +1,27 @@
+server:
+  port: 8082
+
+spring: 
+  application: 
+    name: adidas-sub
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    
+feign:
+  hystrix:
+    enabled: true
+
+security:
+  basicAuth:  
+    username: spring
+    password: secret 
+
+eureka: 
+   client:
+     healthcheck:
+      enabled: true  
+     serviceUrl: 
+       defaultZone: http://@url.eureka@:8080/eureka/
+   instance:  
+    prefer-ip-address: true
