@@ -21,3 +21,5 @@ eureka:
       defaultZone: http://@url.eureka@:8080/eureka/
    instance:  
     prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2

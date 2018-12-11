@@ -5,24 +5,21 @@ spring:
   application: 
     name: adidas-zuul
     
-zuul:
-  ignored-services: '*'
+zuul:    
+  prefix: /api
   routes:
     adidas-sub:
-      path: /subscriptions/**
+      path: /adidas-sub/**
       service-id: adidas-sub 
       sensitive-headers: Cookie,Set-Cookie 
-      stripPrefix: false
     adidas-evt:
-      path: /events/**
+      path: /adidas-evt/**
       service-id: adidas-evt 
       sensitive-headers: Cookie,Set-Cookie
-      stripPrefix: false
     adidas-email:
-      path: /emails/**
+      path: /adidas-email/**
       service-id: adidas-email 
-      sensitive-headers: Cookie,Set-Cookie    
-      stripPrefix: false
+      sensitive-headers: Cookie,Set-Cookie
 
 eureka: 
    client:
