@@ -6,6 +6,7 @@ This guide shows you how to build and run a Coding Challenge Web Services and In
  - Architecture
  - Getting Started 
  - Features
+ - Travis CI
  
 ## Prerequisites
  - Maven 
@@ -102,6 +103,12 @@ Eureka server
 #### Documentation
 
 [Documentação http://localhost:2020/swagger-ui.html](http://localhost:2020/swagger-ui.html) 
+
+## Travis CI
+
+Travis CI was implemented with just a simple commands to demonstrate if the spring boot building are passing.
+
+Normally, we should create one profile "prod" and configure all urls from heroku or whatever PaaS.
 
 ## Authors
 
