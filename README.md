@@ -1,5 +1,5 @@
-
 # Adidas challenge [![Build Status](https://travis-ci.org/iorran/desafio-adidas.svg?branch=master)](https://travis-ci.org/iorran/desafio-adidas)
+
 This guide shows you how to build and run a Coding Challenge Web Services and Integration. 
 ## Contents
  - Prerequisites
