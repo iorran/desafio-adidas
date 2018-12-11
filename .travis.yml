@@ -1,0 +1,14 @@
+language: java
+jdk: oraclejdk8
+ 
+script:
+- ./adidas-db/mvnw clean install -B
+- ./adidas-zuul/mvnw clean install -B
+- ./adidas-eureka/mvnw clean install -B
+- ./adidas-evt/mvnw clean install -B
+- ./adidas-email/mvnw clean install -B
+- ./adidas-sub/mvnw clean install -B
+
+ 
+
+
