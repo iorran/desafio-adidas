@@ -3,6 +3,7 @@
 This guide shows you how to build and run a Coding Challenge Web Services and Integration. 
 ## Contents
  - Prerequisites
+ - Architecture
  - Getting Started 
  - Features
  
@@ -13,13 +14,21 @@ This guide shows you how to build and run a Coding Challenge Web Services and In
  - Git 
  - Java 8
  
+## Architecture
+
+Ilustrative architeture to demonstrate the flux.
+
+![architeture](https://uploaddeimagens.com.br/images/001/773/966/original/example.png?1544542551)
+
+##### Note: adidas-db, adidas-evt and adidas-email will be located in different containers
+
 ## Getting Started 
 ### Clone the repository
 ```
 git clone https://github.com/iorran/adidas-db.git
 ```
 ###  Running
-Here we gonna demonstrate how to run the challenge into your local machine or docker containers.
+Demonstration of how to run the challenge into your local machine or docker containers.
 All statements assume that you have opened a terminal in the root folder: **desafio-adidas**
 ![root folder](https://uploaddeimagens.com.br/images/001/773/432/full/folder.png?1544525525)
 #### Local
@@ -41,9 +50,9 @@ All statements assume that you have opened a terminal in the root folder: **desa
     ```docker-compose up```
     
 ## Features
- - We have used [Spring Cloud Netflix](https://spring.io/projects/spring-cloud-netflix) integrations to build our microservices.
+ - Technologies used [Spring Cloud Netflix](https://spring.io/projects/spring-cloud-netflix) integrations to build our microservices.
  - All microservices are protected by spring security.
- - We have swagger documentation implemented.
+ - Swagger documentation implemented.
 
 #### Microservice: Adidas DB
 ##### Description
@@ -91,11 +100,12 @@ Eureka server
  - Service Discovery: an embedded Eureka server can be created with declarative Java configuration
 
 #### Documentation
-URL: http://localhost:2020/swagger-ui.html
+
+[Documentação http://localhost:2020/swagger-ui.html](http://localhost:2020/swagger-ui.html) 
 
 ## Authors
 
-* **Iorran Castro** - (https://github.com/iorran) 
+**Iorran Castro** - [Github](https://github.com/iorran)
 
 ## License
 
